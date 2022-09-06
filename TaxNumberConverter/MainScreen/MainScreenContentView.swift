@@ -11,11 +11,24 @@ final class MainScreenContentView: UIView {
     
     // MARK: - Subviews
     
-    private lazy var tableView: UITableView = {
+    lazy var tableView: UITableView = {
         let tableView = UITableView(frame: .zero, style: .insetGrouped)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(TextFieldTableViewCell.self, forCellReuseIdentifier: TextFieldTableViewCell.reuseIdentifier)
         tableView.register(MainScreenTableViewCell.self, forCellReuseIdentifier: MainScreenTableViewCell.reuseIdentifier)
+        
+        let label = UILabel()
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.numberOfLines = 0
+        label.font = .systemFont(ofSize: 15)
+        label.text = TextConstants.footerText
+        label.textColor = .systemGray
+        
+        let bufferView = UIView()
+        bufferView.addSubview(label)
+        label.attachToSuperview(insets: .init(top: 8, left: 40, bottom: -16, right: -40))
+        tableView.tableHeaderView = bufferView
+        
         return tableView
     }()
     
@@ -52,19 +65,21 @@ final class MainScreenContentView: UIView {
         ])
     }
     
+    // MARK: - Public methods
+    
     func updateLand() {
-        tableView.reloadRows(at: [IndexPath(row: 1, section: 0)], with: .none)
+        tableView.reloadRows(at: [CellIndex.landPicker.indexPath], with: .none)
     }
     
     func updateResult() {
-        tableView.reloadRows(at: [IndexPath(row: 0, section: 1)], with: .none)
+        tableView.reloadRows(at: [CellIndex.landPicker.indexPath], with: .none)
     }
     
     func showResult() {
-        tableView.insertSections(IndexSet(integer: 1), with: .middle)
+        tableView.insertSections(IndexSet(integer: CellIndex.result.indexPath.section), with: .middle)
     }
     
     func hideResult() {
-        tableView.deleteSections(IndexSet(integer: 1), with: .middle)
+        tableView.deleteSections(IndexSet(integer: CellIndex.result.indexPath.section), with: .middle)
     }
 }

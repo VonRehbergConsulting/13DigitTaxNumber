@@ -10,7 +10,7 @@ import UIKit
 class MainScreenTableViewCell: UITableViewCell, ReusableCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: .value1, reuseIdentifier: reuseIdentifier)
+        super.init(style: .value2, reuseIdentifier: reuseIdentifier)
     }
     
     required init?(coder: NSCoder) {

@@ -15,6 +15,8 @@
 		B75CD47028C6254D00074CD9 /* LandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75CD46F28C6254D00074CD9 /* LandViewController.swift */; };
 		B75CD47428C6361700074CD9 /* NumberConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75CD47328C6361700074CD9 /* NumberConverter.swift */; };
 		B75CD47C28C63AB700074CD9 /* NumberConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75CD47B28C63AB700074CD9 /* NumberConverterTests.swift */; };
+		B75CD48328C7649F00074CD9 /* CellIndex.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75CD48228C7649F00074CD9 /* CellIndex.swift */; };
+		B75CD48528C776B500074CD9 /* TextConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75CD48428C776B500074CD9 /* TextConstants.swift */; };
 		B7C680BF28C5F3A4001CB41A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C680BE28C5F3A4001CB41A /* AppDelegate.swift */; };
 		B7C680C128C5F3A4001CB41A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C680C028C5F3A4001CB41A /* SceneDelegate.swift */; };
 		B7C680C828C5F3A4001CB41A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7C680C728C5F3A4001CB41A /* Assets.xcassets */; };
@@ -43,6 +45,8 @@
 		B75CD47328C6361700074CD9 /* NumberConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberConverter.swift; sourceTree = "<group>"; };
 		B75CD47928C63AB700074CD9 /* TaxNumberConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaxNumberConverterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B75CD47B28C63AB700074CD9 /* NumberConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberConverterTests.swift; sourceTree = "<group>"; };
+		B75CD48228C7649F00074CD9 /* CellIndex.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellIndex.swift; sourceTree = "<group>"; };
+		B75CD48428C776B500074CD9 /* TextConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextConstants.swift; sourceTree = "<group>"; };
 		B7C680BB28C5F3A4001CB41A /* TaxNumberConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaxNumberConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B7C680BE28C5F3A4001CB41A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B7C680C028C5F3A4001CB41A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +123,8 @@
 				B75CD46628C60FFC00074CD9 /* ReusableCell.swift */,
 				B75CD46A28C61CF200074CD9 /* Land.swift */,
 				B75CD47328C6361700074CD9 /* NumberConverter.swift */,
+				B75CD48228C7649F00074CD9 /* CellIndex.swift */,
+				B75CD48428C776B500074CD9 /* TextConstants.swift */,
 			);
 			path = TaxNumberConverter;
 			sourceTree = "<group>";
@@ -247,11 +253,13 @@
 				B7C680BF28C5F3A4001CB41A /* AppDelegate.swift in Sources */,
 				B7C680D628C5F6A8001CB41A /* MainScreenContentView.swift in Sources */,
 				B75CD47028C6254D00074CD9 /* LandViewController.swift in Sources */,
+				B75CD48528C776B500074CD9 /* TextConstants.swift in Sources */,
 				B7C680C128C5F3A4001CB41A /* SceneDelegate.swift in Sources */,
 				B7C680D428C5F694001CB41A /* MainScreenViewController.swift in Sources */,
 				B75CD46D28C6234D00074CD9 /* MainScreenTableViewCell.swift in Sources */,
 				B75CD46528C6022300074CD9 /* UIView.swift in Sources */,
 				B75CD46728C60FFD00074CD9 /* ReusableCell.swift in Sources */,
+				B75CD48328C7649F00074CD9 /* CellIndex.swift in Sources */,
 				B75CD46328C600E900074CD9 /* TextFieldTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -8,7 +8,7 @@
 import Foundation
 
 enum Land: String, CaseIterable {
-    case badenWuerttemberg = "Baden Wuerttemberg"
+    case badenWuerttemberg = "Baden Wüerttemberg"
     case berlin = "Berlin"
     case bremen = "Bremen"
     case hamburg = "Hamburg"

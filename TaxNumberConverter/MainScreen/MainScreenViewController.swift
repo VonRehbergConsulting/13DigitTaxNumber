@@ -18,6 +18,7 @@ final class MainScreenViewController: UIViewController,
     private var result: String?
     
     private var converter = NumberConverter()
+    private var displayedTextField: UIView?
     var contentView: MainScreenContentView? { view as? MainScreenContentView }
     
     // MARK: - Lifecycle
@@ -31,6 +32,22 @@ final class MainScreenViewController: UIViewController,
         
         contentView?.tableViewDataSource = self
         contentView?.tableViewDelegate = self
+        
+        navigationController?.navigationBar.prefersLargeTitles = true
+        navigationItem.title = TextConstants.mainScreenTitle
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        guard let tableView = contentView?.tableView,
+              let headerView = tableView.tableHeaderView
+        else { return }
+        let width = tableView.bounds.size.width
+        let size = headerView.systemLayoutSizeFitting(CGSize(width: width, height: UIView.layoutFittingCompressedSize.height))
+        if headerView.frame.size.height != size.height {
+            headerView.frame.size.height = size.height
+            tableView.tableHeaderView = headerView
+        }
     }
     
     // MARK: - UITableViewDataSource
@@ -38,27 +55,34 @@ final class MainScreenViewController: UIViewController,
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
         case 0:
-            return "Enter data"
+            return TextConstants.numberFieldTitle
         case 1:
-            return "Result (tap to copy)"
+            return TextConstants.landPickerTitle
+        case 2:
+            return TextConstants.resultTitle
         default:
             return nil
         }
     }
     
+    func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        if section == 2 {
+            return TextConstants.resultFooter
+        }
+        return nil
+    }
+    
     func numberOfSections(in tableView: UITableView) -> Int {
         if result == nil {
-            return 1
-        } else {
             return 2
+        } else {
+            return 3
         }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         switch section {
-        case 0:
-            return 2
-        case 1:
+        case 0, 1, 2:
             return 1
         default:
             return 0
@@ -66,19 +90,18 @@ final class MainScreenViewController: UIViewController,
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0 {
-            if indexPath.row == 0 {
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: TextFieldTableViewCell.reuseIdentifier) as? TextFieldTableViewCell else { return UITableViewCell() }
-                cell.contentView.isUserInteractionEnabled = false
-                cell.textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
-                return cell
-            } else if indexPath.row == 1 {
-                guard let cell = tableView.dequeueReusableCell(withIdentifier: MainScreenTableViewCell.reuseIdentifier) as? MainScreenTableViewCell else { return UITableViewCell() }
-                cell.configure(text: "Land", secondaryText: land?.rawValue, showIndicator: true)
-                cell.selectionStyle = .none
-                return cell
-            }
-        } else if indexPath.section == 1 {
+        if indexPath == CellIndex.numberTextField.indexPath {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: TextFieldTableViewCell.reuseIdentifier) as? TextFieldTableViewCell else { return UITableViewCell() }
+            displayedTextField = cell.textField
+            cell.textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+            return cell
+        } else if indexPath == CellIndex.landPicker.indexPath {
+            guard let cell = tableView.dequeueReusableCell(withIdentifier: MainScreenTableViewCell.reuseIdentifier) as? MainScreenTableViewCell else { return UITableViewCell() }
+            let secondaryText = land?.rawValue == nil ? TextConstants.landPickerPlaceholder : nil
+            cell.configure(text: land?.rawValue, secondaryText: secondaryText, showIndicator: true)
+            cell.selectionStyle = .none
+            return cell
+        } else if indexPath == CellIndex.result.indexPath {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: MainScreenTableViewCell.reuseIdentifier) as? MainScreenTableViewCell else { return UITableViewCell() }
             cell.configure(text: result, secondaryText: nil, showIndicator: false)
             cell.selectionStyle = .default
@@ -90,22 +113,25 @@ final class MainScreenViewController: UIViewController,
     // MARK: - UITableViewDelegate
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if indexPath.section == 0,
-           indexPath.row == 1 {
+        displayedTextField?.resignFirstResponder()
+        if indexPath == CellIndex.landPicker.indexPath {
             let controller = LandViewController()
             controller.didSelectHandler = { [weak self] land in
                 guard let self = self else { return }
                 self.land = land
                 self.contentView?.updateLand()
                 self.tryCalculate()
-                controller.dismiss(animated: true)
+                self.navigationController?.popViewController(animated: true)
             }
-            present(controller, animated: true)
-        } else if indexPath.section == 1,
-                  indexPath.row == 0 {
+            navigationController?.pushViewController(controller, animated: true)
+        } else if indexPath == CellIndex.result.indexPath {
             UIPasteboard.general.string = result
             tableView.deselectRow(at: indexPath, animated: true)
         }
+    }
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        displayedTextField?.resignFirstResponder()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {

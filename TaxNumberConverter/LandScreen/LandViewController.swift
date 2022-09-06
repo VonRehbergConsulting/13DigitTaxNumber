@@ -11,7 +11,7 @@ import UIKit
 final class LandViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     private lazy var tableView: UITableView = {
-        let tableView = UITableView(frame: .zero, style: .grouped)
+        let tableView = UITableView(frame: .zero, style: .insetGrouped)
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(UITableViewCell.self, forCellReuseIdentifier: reuseIdentifier)
         tableView.dataSource = self
@@ -29,6 +29,7 @@ final class LandViewController: UIViewController, UITableViewDataSource, UITable
         view = UIView()
         view.addSubview(tableView)
         tableView.attachToSuperview()
+        navigationItem.title = TextConstants.landPickerScreenTitle
     }
     
     // MARK: - UITableViewDataSource
