@@ -1,0 +1,522 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		B75CD46328C600E900074CD9 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75CD46228C600E900074CD9 /* TextFieldTableViewCell.swift */; };
+		B75CD46528C6022300074CD9 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75CD46428C6022300074CD9 /* UIView.swift */; };
+		B75CD46728C60FFD00074CD9 /* ReusableCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75CD46628C60FFC00074CD9 /* ReusableCell.swift */; };
+		B75CD46B28C61CF200074CD9 /* Land.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75CD46A28C61CF200074CD9 /* Land.swift */; };
+		B75CD46D28C6234D00074CD9 /* MainScreenTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75CD46C28C6234D00074CD9 /* MainScreenTableViewCell.swift */; };
+		B75CD47028C6254D00074CD9 /* LandViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75CD46F28C6254D00074CD9 /* LandViewController.swift */; };
+		B75CD47428C6361700074CD9 /* NumberConverter.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75CD47328C6361700074CD9 /* NumberConverter.swift */; };
+		B75CD47C28C63AB700074CD9 /* NumberConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75CD47B28C63AB700074CD9 /* NumberConverterTests.swift */; };
+		B7C680BF28C5F3A4001CB41A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C680BE28C5F3A4001CB41A /* AppDelegate.swift */; };
+		B7C680C128C5F3A4001CB41A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C680C028C5F3A4001CB41A /* SceneDelegate.swift */; };
+		B7C680C828C5F3A4001CB41A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B7C680C728C5F3A4001CB41A /* Assets.xcassets */; };
+		B7C680CB28C5F3A4001CB41A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B7C680C928C5F3A4001CB41A /* LaunchScreen.storyboard */; };
+		B7C680D428C5F694001CB41A /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C680D328C5F694001CB41A /* MainScreenViewController.swift */; };
+		B7C680D628C5F6A8001CB41A /* MainScreenContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7C680D528C5F6A8001CB41A /* MainScreenContentView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B75CD47D28C63AB700074CD9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B7C680B328C5F3A3001CB41A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B7C680BA28C5F3A4001CB41A;
+			remoteInfo = TaxNumberConverter;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		B75CD46228C600E900074CD9 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		B75CD46428C6022300074CD9 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		B75CD46628C60FFC00074CD9 /* ReusableCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCell.swift; sourceTree = "<group>"; };
+		B75CD46A28C61CF200074CD9 /* Land.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Land.swift; sourceTree = "<group>"; };
+		B75CD46C28C6234D00074CD9 /* MainScreenTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenTableViewCell.swift; sourceTree = "<group>"; };
+		B75CD46F28C6254D00074CD9 /* LandViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandViewController.swift; sourceTree = "<group>"; };
+		B75CD47328C6361700074CD9 /* NumberConverter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberConverter.swift; sourceTree = "<group>"; };
+		B75CD47928C63AB700074CD9 /* TaxNumberConverterTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TaxNumberConverterTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B75CD47B28C63AB700074CD9 /* NumberConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberConverterTests.swift; sourceTree = "<group>"; };
+		B7C680BB28C5F3A4001CB41A /* TaxNumberConverter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TaxNumberConverter.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B7C680BE28C5F3A4001CB41A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		B7C680C028C5F3A4001CB41A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		B7C680C728C5F3A4001CB41A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B7C680CA28C5F3A4001CB41A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B7C680CC28C5F3A4001CB41A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B7C680D328C5F694001CB41A /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
+		B7C680D528C5F6A8001CB41A /* MainScreenContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenContentView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B75CD47628C63AB700074CD9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7C680B828C5F3A4001CB41A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		B75CD46E28C6253000074CD9 /* LandScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B75CD46F28C6254D00074CD9 /* LandViewController.swift */,
+			);
+			path = LandScreen;
+			sourceTree = "<group>";
+		};
+		B75CD47A28C63AB700074CD9 /* TaxNumberConverterTests */ = {
+			isa = PBXGroup;
+			children = (
+				B75CD47B28C63AB700074CD9 /* NumberConverterTests.swift */,
+			);
+			path = TaxNumberConverterTests;
+			sourceTree = "<group>";
+		};
+		B7C680B228C5F3A3001CB41A = {
+			isa = PBXGroup;
+			children = (
+				B7C680BD28C5F3A4001CB41A /* TaxNumberConverter */,
+				B75CD47A28C63AB700074CD9 /* TaxNumberConverterTests */,
+				B7C680BC28C5F3A4001CB41A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		B7C680BC28C5F3A4001CB41A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B7C680BB28C5F3A4001CB41A /* TaxNumberConverter.app */,
+				B75CD47928C63AB700074CD9 /* TaxNumberConverterTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B7C680BD28C5F3A4001CB41A /* TaxNumberConverter */ = {
+			isa = PBXGroup;
+			children = (
+				B7C680BE28C5F3A4001CB41A /* AppDelegate.swift */,
+				B7C680C028C5F3A4001CB41A /* SceneDelegate.swift */,
+				B7C680C728C5F3A4001CB41A /* Assets.xcassets */,
+				B7C680C928C5F3A4001CB41A /* LaunchScreen.storyboard */,
+				B7C680CC28C5F3A4001CB41A /* Info.plist */,
+				B7C680D228C5F67A001CB41A /* MainScreen */,
+				B75CD46E28C6253000074CD9 /* LandScreen */,
+				B75CD46428C6022300074CD9 /* UIView.swift */,
+				B75CD46628C60FFC00074CD9 /* ReusableCell.swift */,
+				B75CD46A28C61CF200074CD9 /* Land.swift */,
+				B75CD47328C6361700074CD9 /* NumberConverter.swift */,
+			);
+			path = TaxNumberConverter;
+			sourceTree = "<group>";
+		};
+		B7C680D228C5F67A001CB41A /* MainScreen */ = {
+			isa = PBXGroup;
+			children = (
+				B75CD46228C600E900074CD9 /* TextFieldTableViewCell.swift */,
+				B75CD46C28C6234D00074CD9 /* MainScreenTableViewCell.swift */,
+				B7C680D528C5F6A8001CB41A /* MainScreenContentView.swift */,
+				B7C680D328C5F694001CB41A /* MainScreenViewController.swift */,
+			);
+			path = MainScreen;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B75CD47828C63AB700074CD9 /* TaxNumberConverterTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B75CD47F28C63AB700074CD9 /* Build configuration list for PBXNativeTarget "TaxNumberConverterTests" */;
+			buildPhases = (
+				B75CD47528C63AB700074CD9 /* Sources */,
+				B75CD47628C63AB700074CD9 /* Frameworks */,
+				B75CD47728C63AB700074CD9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B75CD47E28C63AB700074CD9 /* PBXTargetDependency */,
+			);
+			name = TaxNumberConverterTests;
+			productName = TaxNumberConverterTests;
+			productReference = B75CD47928C63AB700074CD9 /* TaxNumberConverterTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B7C680BA28C5F3A4001CB41A /* TaxNumberConverter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B7C680CF28C5F3A4001CB41A /* Build configuration list for PBXNativeTarget "TaxNumberConverter" */;
+			buildPhases = (
+				B7C680B728C5F3A4001CB41A /* Sources */,
+				B7C680B828C5F3A4001CB41A /* Frameworks */,
+				B7C680B928C5F3A4001CB41A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TaxNumberConverter;
+			productName = TaxNumberConverter;
+			productReference = B7C680BB28C5F3A4001CB41A /* TaxNumberConverter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B7C680B328C5F3A3001CB41A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					B75CD47828C63AB700074CD9 = {
+						CreatedOnToolsVersion = 13.4.1;
+						TestTargetID = B7C680BA28C5F3A4001CB41A;
+					};
+					B7C680BA28C5F3A4001CB41A = {
+						CreatedOnToolsVersion = 13.4.1;
+					};
+				};
+			};
+			buildConfigurationList = B7C680B628C5F3A3001CB41A /* Build configuration list for PBXProject "TaxNumberConverter" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B7C680B228C5F3A3001CB41A;
+			productRefGroup = B7C680BC28C5F3A4001CB41A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B7C680BA28C5F3A4001CB41A /* TaxNumberConverter */,
+				B75CD47828C63AB700074CD9 /* TaxNumberConverterTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B75CD47728C63AB700074CD9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7C680B928C5F3A4001CB41A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B7C680CB28C5F3A4001CB41A /* LaunchScreen.storyboard in Resources */,
+				B7C680C828C5F3A4001CB41A /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B75CD47528C63AB700074CD9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B75CD47C28C63AB700074CD9 /* NumberConverterTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B7C680B728C5F3A4001CB41A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B75CD47428C6361700074CD9 /* NumberConverter.swift in Sources */,
+				B75CD46B28C61CF200074CD9 /* Land.swift in Sources */,
+				B7C680BF28C5F3A4001CB41A /* AppDelegate.swift in Sources */,
+				B7C680D628C5F6A8001CB41A /* MainScreenContentView.swift in Sources */,
+				B75CD47028C6254D00074CD9 /* LandViewController.swift in Sources */,
+				B7C680C128C5F3A4001CB41A /* SceneDelegate.swift in Sources */,
+				B7C680D428C5F694001CB41A /* MainScreenViewController.swift in Sources */,
+				B75CD46D28C6234D00074CD9 /* MainScreenTableViewCell.swift in Sources */,
+				B75CD46528C6022300074CD9 /* UIView.swift in Sources */,
+				B75CD46728C60FFD00074CD9 /* ReusableCell.swift in Sources */,
+				B75CD46328C600E900074CD9 /* TextFieldTableViewCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B75CD47E28C63AB700074CD9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B7C680BA28C5F3A4001CB41A /* TaxNumberConverter */;
+			targetProxy = B75CD47D28C63AB700074CD9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B7C680C928C5F3A4001CB41A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B7C680CA28C5F3A4001CB41A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B75CD48028C63AB700074CD9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 383J7R89WY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = vonrehberg.TaxNumberConverterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaxNumberConverter.app/TaxNumberConverter";
+			};
+			name = Debug;
+		};
+		B75CD48128C63AB700074CD9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 383J7R89WY;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = vonrehberg.TaxNumberConverterTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TaxNumberConverter.app/TaxNumberConverter";
+			};
+			name = Release;
+		};
+		B7C680CD28C5F3A4001CB41A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		B7C680CE28C5F3A4001CB41A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B7C680D028C5F3A4001CB41A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 383J7R89WY;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TaxNumberConverter/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "13 digit tax number";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = vonrehberg.TaxNumberConverter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		B7C680D128C5F3A4001CB41A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 383J7R89WY;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = TaxNumberConverter/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "13 digit tax number";
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = vonrehberg.TaxNumberConverter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B75CD47F28C63AB700074CD9 /* Build configuration list for PBXNativeTarget "TaxNumberConverterTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B75CD48028C63AB700074CD9 /* Debug */,
+				B75CD48128C63AB700074CD9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7C680B628C5F3A3001CB41A /* Build configuration list for PBXProject "TaxNumberConverter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7C680CD28C5F3A4001CB41A /* Debug */,
+				B7C680CE28C5F3A4001CB41A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B7C680CF28C5F3A4001CB41A /* Build configuration list for PBXNativeTarget "TaxNumberConverter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B7C680D028C5F3A4001CB41A /* Debug */,
+				B7C680D128C5F3A4001CB41A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = B7C680B328C5F3A3001CB41A /* Project object */;
+}
