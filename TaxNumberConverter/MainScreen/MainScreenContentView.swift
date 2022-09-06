@@ -16,6 +16,7 @@ final class MainScreenContentView: UIView {
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(TextFieldTableViewCell.self, forCellReuseIdentifier: TextFieldTableViewCell.reuseIdentifier)
         tableView.register(MainScreenTableViewCell.self, forCellReuseIdentifier: MainScreenTableViewCell.reuseIdentifier)
+        tableView.isScrollEnabled = false
         
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -55,13 +56,14 @@ final class MainScreenContentView: UIView {
     }
     
     private func setup() {
+        backgroundColor = .systemGroupedBackground
         addSubview(tableView)
         
         NSLayoutConstraint.activate([
-            tableView.topAnchor.constraint(equalTo: topAnchor),
+            tableView.topAnchor.constraint(equalTo: safeAreaLayoutGuide.topAnchor),
             tableView.leftAnchor.constraint(equalTo: safeAreaLayoutGuide.leftAnchor),
             tableView.rightAnchor.constraint(equalTo: safeAreaLayoutGuide.rightAnchor),
-            tableView.bottomAnchor.constraint(equalTo: bottomAnchor)
+            tableView.bottomAnchor.constraint(equalTo: safeAreaLayoutGuide.bottomAnchor)
         ])
     }
     
