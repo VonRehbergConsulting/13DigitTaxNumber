@@ -8,16 +8,16 @@
 import Foundation
 
 struct TextConstants {
-    static let mainScreenTitle = "Umrechner"
+    static let mainScreenTitle = "ELSTER-Umrechnung"
     static let landPickerScreenTitle = TextConstants.landPickerPlaceholder
     
-    static let numberFieldTitle = "10- order 11-stellige Steuernummer"
-    static let landPickerTitle = "Land"
+    static let numberFieldTitle = "10- oder 11-stellige Steuernummer"
+    static let landPickerTitle = "Bundesland"
     static let resultTitle = "13-stellige ELSTER-Steuernummer"
-    static let resultFooter = "Tap to copy"
+    static let resultFooter = "Zum Kopieren antippen"
     
-    static let numberFieldPlaceholder = "Enter number"
-    static let landPickerPlaceholder = "Choose land"
+    static let numberFieldPlaceholder = "123 456 78901"
+    static let landPickerPlaceholder = "Bitte auswählen"
     
-    static let footerText = "Header label with a lot of text that probably wouldn't fit in one line. But it's fine, it should also work with the multiple lines "
+    static let footerText = "Um ihre bundeseinheitliche ELSTER-Steuernummer mit 13 Stellen zu berechnen, wählen Sie zuerst ihr Bundesland und geben Sie anschließend ihre länderspezifische Steuernummer an. "
 }
