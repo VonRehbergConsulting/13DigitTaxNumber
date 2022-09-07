@@ -446,7 +446,7 @@
 				DEVELOPMENT_TEAM = 383J7R89WY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TaxNumberConverter/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "13 digit tax number";
+				INFOPLIST_KEY_CFBundleDisplayName = "Steuernummer¹³";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
@@ -476,7 +476,7 @@
 				DEVELOPMENT_TEAM = 383J7R89WY;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = TaxNumberConverter/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "13 digit tax number";
+				INFOPLIST_KEY_CFBundleDisplayName = "Steuernummer¹³";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
