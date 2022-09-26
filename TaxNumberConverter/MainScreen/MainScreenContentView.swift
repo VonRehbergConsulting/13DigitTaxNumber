@@ -74,7 +74,7 @@ final class MainScreenContentView: UIView {
     }
     
     func updateResult() {
-        tableView.reloadRows(at: [CellIndex.landPicker.indexPath], with: .none)
+        tableView.reloadRows(at: [CellIndex.result.indexPath], with: .none)
     }
     
     func showResult() {
