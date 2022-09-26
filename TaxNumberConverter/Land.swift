@@ -9,21 +9,21 @@ import Foundation
 
 enum Land: String, CaseIterable {
     case badenWuerttemberg = "Baden Wüerttemberg"
+    case bayern = "Bayern"
     case berlin = "Berlin"
+    case brandenburg = "Brandenburg"
     case bremen = "Bremen"
     case hamburg = "Hamburg"
-    case niedersachsen = "Niedersachsen"
-    case rheinlandPfalz = "Rheinland Pfalz"
-    case schleswigHolstein = "Schleswig Holstein"
-    case bayern = "Bayern"
-    case brandenburg = "Brandenburg"
-    case mecklenburgVorpommern = "Mecklenburg Vorpommern"
-    case saarland = "Saarland"
-    case sachsenFreistaat = "Sachsen Freistaat"
-    case sachsenAnhalt = "Sachsen Anhalt"
-    case thueringen = "Thueringen"
     case hessen = "Hessen"
-    case nordrheinWestfalen = "Nordrhein Westfalen"
+    case mecklenburgVorpommern = "Mecklenburg-Vorpommern"
+    case niedersachsen = "Niedersachsen"
+    case nordrheinWestfalen = "Nordrhein-Westfalen"
+    case rheinlandPfalz = "Rheinland-Pfalz"
+    case saarland = "Saarland"
+    case sachsenFreistaat = "Sachsen"
+    case sachsenAnhalt = "Sachsen-Anhalt"
+    case schleswigHolstein = "Schleswig-Holstein"
+    case thueringen = "Thueringen"
     
     var requiredNumbersCount: Int {
         switch self {
