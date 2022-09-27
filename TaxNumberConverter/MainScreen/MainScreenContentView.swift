@@ -70,7 +70,7 @@ final class MainScreenContentView: UIView {
     // MARK: - Public methods
     
     func updateLand() {
-        tableView.reloadRows(at: [CellIndex.landPicker.indexPath], with: .none)
+        tableView.reloadData()
     }
     
     func updateResult() {

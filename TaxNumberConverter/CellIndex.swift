@@ -14,9 +14,9 @@ enum CellIndex {
     
     var indexPath: IndexPath {
         switch self {
-        case .numberTextField:
-            return IndexPath(row: 0, section: 0)
         case .landPicker:
+            return IndexPath(row: 0, section: 0)
+        case .numberTextField:
             return IndexPath(row: 0, section: 1)
         case .result:
             return IndexPath(row: 0, section: 2)

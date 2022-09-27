@@ -33,4 +33,9 @@ enum Land: String, CaseIterable {
             return 11
         }
     }
+    var hint: String {
+        if self == .hessen { return TextConstants.hintForHessen }
+        if requiredNumbersCount == 10 { return TextConstants.hintForShortNumber }
+        return TextConstants.hintForLongNumber
+    }
 }
