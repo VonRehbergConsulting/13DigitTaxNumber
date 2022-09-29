@@ -61,10 +61,6 @@ platform :ios do
     )
     
     increment_build_number(xcodeproj: "TaxNumberConverter.xcodeproj")
-    
-    cocoapods(
-      clean_install: true
-    )
 
     match(
       type: 'appstore',
@@ -79,7 +75,7 @@ platform :ios do
     gym(
       configuration: "Release",
       project: "TaxNumberConverter.xcodeproj",
-      scheme: "your_schema",
+      scheme: "TaxNumberConverter",
       export_method: "app-store",
       export_options: {
         provisioningProfiles: { 
@@ -95,7 +91,7 @@ platform :ios do
       skip_submission: true,
       distribute_external: false,
       notify_external_testers: false,
-      ipa: "./your_app_name.ipa"
+      ipa: "./TaxNumberConverter.ipa"
     )
 
     delete_temp_keychain(keychain_name)
