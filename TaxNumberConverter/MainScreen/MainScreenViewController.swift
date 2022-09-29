@@ -54,11 +54,11 @@ final class MainScreenViewController: UIViewController,
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         switch section {
-        case 0:
-            return TextConstants.numberFieldTitle
-        case 1:
+        case CellIndex.landPicker.indexPath.section:
             return TextConstants.landPickerTitle
-        case 2:
+        case CellIndex.numberTextField.indexPath.section:
+            return TextConstants.numberFieldTitle
+        case CellIndex.result.indexPath.section:
             return TextConstants.resultTitle
         default:
             return nil
@@ -66,6 +66,9 @@ final class MainScreenViewController: UIViewController,
     }
     
     func tableView(_ tableView: UITableView, titleForFooterInSection section: Int) -> String? {
+        if section == 1 {
+            return land?.hint
+        }
         if section == 2 {
             return TextConstants.resultFooter
         }
@@ -73,6 +76,9 @@ final class MainScreenViewController: UIViewController,
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
+        if land == nil {
+            return 1
+        }
         if result == nil {
             return 2
         } else {
@@ -93,6 +99,15 @@ final class MainScreenViewController: UIViewController,
         if indexPath == CellIndex.numberTextField.indexPath {
             guard let cell = tableView.dequeueReusableCell(withIdentifier: TextFieldTableViewCell.reuseIdentifier) as? TextFieldTableViewCell else { return UITableViewCell() }
             displayedTextField = cell.textField
+            
+            let bar = UIToolbar()
+            let leftSpace = UIBarButtonItem(barButtonSystemItem: .flexibleSpace, target: nil, action: nil)
+            let button = UIBarButtonItem(title: "Done", style: .done, target: self, action: #selector(toolbarButtonAction))
+            bar.items = [leftSpace, button]
+            bar.sizeToFit()
+            cell.textField.inputAccessoryView = bar
+            
+            cell.textField.text = nil;
             cell.textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
             return cell
         } else if indexPath == CellIndex.landPicker.indexPath {
@@ -119,8 +134,9 @@ final class MainScreenViewController: UIViewController,
             controller.didSelectHandler = { [weak self] land in
                 guard let self = self else { return }
                 self.land = land
+                self.number = nil;
+                self.result = nil;
                 self.contentView?.updateLand()
-                self.tryCalculate()
                 self.navigationController?.popViewController(animated: true)
             }
             navigationController?.pushViewController(controller, animated: true)
@@ -162,5 +178,9 @@ final class MainScreenViewController: UIViewController,
     @objc private func textFieldDidChange(_ textField: UITextField) {
         number = textField.text
         tryCalculate()
+    }
+    
+    @objc private func toolbarButtonAction() {
+        displayedTextField?.resignFirstResponder()
     }
 }

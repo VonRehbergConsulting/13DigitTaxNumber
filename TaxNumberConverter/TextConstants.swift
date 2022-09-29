@@ -20,4 +20,8 @@ struct TextConstants {
     static let landPickerPlaceholder = "Bitte auswählen"
     
     static let footerText = "Um ihre bundeseinheitliche ELSTER-Steuernummer mit 13 Stellen zu berechnen, wählen Sie zuerst ihr Bundesland und geben Sie anschließend ihre länderspezifische Steuernummer an. "
+    
+    static let hintForShortNumber = "Die Steuernummer sollte 10 Zeichen lang sein"
+    static let hintForLongNumber = "Die Steuernummer sollte 11 Zeichen lang sein"
+    static let hintForHessen = "Die Steuernummer sollte mit \"0\" beginnen und 11 Zeichen lang sein"
 }
