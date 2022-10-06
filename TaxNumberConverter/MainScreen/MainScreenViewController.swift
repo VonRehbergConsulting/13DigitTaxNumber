@@ -167,10 +167,13 @@ final class MainScreenViewController: UIViewController,
             result = converted
             if converted == nil {
                 contentView?.hideResult()
-            } else if isShown{
-                contentView?.updateResult()
             } else {
-                contentView?.showResult()
+                displayedTextField?.resignFirstResponder()
+                if isShown {
+                    contentView?.updateResult()
+                } else {
+                    contentView?.showResult()
+                }
             }
         }
     }
